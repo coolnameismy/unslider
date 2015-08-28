@@ -176,30 +176,26 @@
 				<h2 id="methods">Accessing Unslider properties</h2>
 				<p>Using jQuery’s wonderful <code>data</code> method, you can access and manually override any methods. Here’s a list of what you can do:</p>
 
-				<pre>var slidey = $('.banner').unslider(),
-    data = slidey.data('unslider');
+                // if $('.banner') is single, return unslider ，else return array of unslider
+				<pre>var unslider = $('.banner').unslider(),
 
 <span>//  Start Unslider</span>
-data.play();
+unslider.play();
 
 <span>//  Pause Unslider</span>
-data.stop();
+unslider.stop();
 
 <span>//  Move to a slide index, with optional callback</span>
-data.to(2, function() {});
-<span>//  data.to(0);</span>
+unslider.to(2, function() {});
+<span>//  unslider.to(0);</span>
 
-<span>//  Manually enable keyboard shortcuts</span>
-data.keys();
 
 <span>//  Move to the next slide (or the first slide if there isn't one)</span>
-data.next();
+unslider.next();
 
 <span>//  Move to the previous slide (or the last slide if there isn't one)</span>
-data.prev();
+unslider.prev();
 
-<span>//  Append the navigation dots manually</span>
-data.dots();</pre>
 			</div>
 		</div>
 
